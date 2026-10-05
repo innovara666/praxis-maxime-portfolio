@@ -16,15 +16,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .cursor{position:fixed;width:10px;height:10px;background:#fff;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference}
 .cursor-follower{position:fixed;width:36px;height:36px;border:1px solid rgba(255,255,255,.25);border-radius:50%;pointer-events:none;z-index:9998;transition:transform .35s var(--ease)}
 #fx-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
-/* Glass orb logo */
-.logo-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.22) 0%,rgba(255,255,255,.06) 40%,rgba(255,255,255,.02) 70%,transparent 100%);border:1px solid rgba(255,255,255,.25);box-shadow:0 0 20px rgba(255,255,255,.15),0 0 50px rgba(255,255,255,.08),inset 0 0 30px rgba(255,255,255,.08),inset 0 1px 0 rgba(255,255,255,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.28em;color:#fff;text-shadow:0 0 4px rgba(255,255,255,1),0 0 12px rgba(255,255,255,.95),0 0 28px rgba(255,255,255,.6),0 0 50px rgba(200,220,255,.4);z-index:3;position:relative;text-align:center}
-.logo-text::after{content:'PRAXIS';position:absolute;left:0;top:0;width:100%;background:linear-gradient(105deg,transparent 15%,rgba(255,255,255,0) 35%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 65%,transparent 85%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 3.5s ease-in-out infinite;pointer-events:none}
+.logo-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;width:180px;height:180px}
+.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.55rem;letter-spacing:.28em;background:linear-gradient(180deg,#ffffff 0%,#f0f4ff 25%,#d8e4ff 55%,#ffffff 80%,#e8eeff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-shadow:0 0 2px rgba(255,255,255,.9),0 0 8px rgba(255,255,255,.45),0 0 18px rgba(200,220,255,.25);filter:contrast(1.08);z-index:5;position:relative;text-align:center}
+.logo-text::after{content:'PRAXIS';position:absolute;left:0;top:0;width:100%;background:linear-gradient(105deg,transparent 25%,rgba(255,255,255,0) 42%,rgba(255,255,255,.7) 50%,rgba(255,255,255,0) 58%,transparent 75%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 4s ease-in-out infinite;pointer-events:none}
 @keyframes shine{0%{background-position:200% 0}100%{background-position:-200% 0}}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes spin-rev{to{transform:rotate(-360deg)}}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.8rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(1,1,1,.85),transparent);backdrop-filter:blur(16px)}
 .nav.scrolled{background:rgba(1,1,1,.92);border-bottom:1px solid rgba(255,255,255,.04)}
-.nav-logo .logo-wrap{width:42px;height:42px}.nav-logo .logo-text{font-size:.55rem;letter-spacing:.12em}
+.nav-logo .logo-wrap{width:40px;height:40px}.nav-logo .logo-text{font-size:.55rem;letter-spacing:.12em}
 .nav-links{display:flex;gap:2.4rem;list-style:none}.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .3s}.nav-links a:hover{color:#fff}
 .nav-cta{padding:.65rem 1.4rem;background:#fff;color:#000;border:none;border-radius:999px;font-weight:600;font-size:.85rem;cursor:none;transition:all .4s var(--ease)}.nav-cta:hover{transform:scale(1.06);box-shadow:0 0 40px rgba(77,159,255,.3)}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 1.5rem 6rem;position:relative;z-index:2;overflow:hidden}
@@ -36,7 +35,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .ring-3{width:55%;height:55%;border-top-color:rgba(255,255,255,.25);border-right-color:rgba(77,159,255,.4);animation:ringPulse 3.5s ease-in-out infinite,spin 14s linear infinite}
 .ring-core{width:18%;height:18%;background:radial-gradient(circle,rgba(77,159,255,.4) 0%,transparent 70%);filter:blur(8px);animation:corePulse 2.5s ease-in-out infinite}
 @keyframes ringPulse{0%,100%{opacity:.7}50%{opacity:1}}@keyframes corePulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6}50%{transform:translate(-50%,-50%) scale(1.4);opacity:1}}
-.energy-flare{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);width:min(420px,70vw);height:min(420px,70vw);pointer-events:none;z-index:2}
+.energy-flare{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:min(380px,65vw);height:min(380px,65vw);pointer-events:none;z-index:2}
 .energy-ring{position:absolute;inset:0;border-radius:50%;border:2px solid transparent}
 .energy-ring-1{border-top:3px solid rgba(0,180,255,.9);border-right:2px solid rgba(140,80,255,.7);box-shadow:0 0 30px rgba(0,180,255,.5),0 0 60px rgba(140,80,255,.3),inset 0 0 20px rgba(0,180,255,.2);animation:energySpin 6s linear infinite,energyPulse 3s ease-in-out infinite}
 .energy-ring-2{inset:12%;border-bottom:3px solid rgba(160,90,255,.85);border-left:2px solid rgba(0,200,255,.5);box-shadow:0 0 25px rgba(160,90,255,.4);animation:energySpinRev 9s linear infinite,energyPulse 4s ease-in-out infinite reverse}
@@ -108,7 +107,7 @@ footer{padding:2rem 2.8rem;border-top:1px solid rgba(255,255,255,.04);display:fl
 <div class="energy-flare"><div class="energy-ring energy-ring-1"></div><div class="energy-ring energy-ring-2"></div><div class="energy-ring energy-ring-3"></div><div class="energy-core"></div></div>
 <div class="hero-content">
 <p class="hero-label">Créateur digital • Paris</p>
-<div class="logo-wrap" style="margin:0 auto 2rem;width:200px;height:200px"><span class="logo-text" style="font-size:1.7rem;letter-spacing:.28em">PRAXIS</span></div>
+<div class="logo-wrap" style="margin:0 auto 1.5rem;width:160px;height:160px"><span class="logo-text" style="font-size:1.4rem;letter-spacing:.26em">PRAXIS</span></div>
 <h1><span>Maxime</span><span style="font-size:.48em;opacity:.65;letter-spacing:.08em">Design • Motion • Code</span></h1>
 <p class="hero-sub">Je conçois des expériences digitales cinématiques qui allient esthétique radicale et performance technique.</p>
 <div class="hero-cta"><a href="#services" class="btn btn-primary">Explorer</a><a href="#contact" class="btn btn-ghost">Collaborer</a></div>
